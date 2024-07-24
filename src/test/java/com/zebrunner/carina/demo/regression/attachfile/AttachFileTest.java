@@ -1,14 +1,13 @@
 package com.zebrunner.carina.demo.regression.attachfile;
 
-import java.net.URL;
-import java.nio.file.Path;
-
+import com.zebrunner.carina.core.IAbstractTest;
+import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import com.zebrunner.carina.demo.gui.pages.desktop.AttachFilePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
+import java.net.URL;
+import java.nio.file.Path;
 
 public class AttachFileTest implements IAbstractTest {
 

@@ -9,12 +9,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
+import java.io.*;
 import java.lang.invoke.MethodHandles;
 import java.net.HttpURLConnection;
 import java.net.URI;
@@ -49,7 +44,7 @@ public class ClipboardTest implements IAbstractTest {
         LOGGER.info("Created connection with the clipboard endpoint.");
         LOGGER.info("Trying to put '{}' text to the clipboard.", clipboardString);
         try (OutputStream os = con.getOutputStream();
-                DataOutputStream ostream = new DataOutputStream(os)) {
+             DataOutputStream ostream = new DataOutputStream(os)) {
             ostream.writeBytes(clipboardString);
             ostream.flush();
         }
@@ -74,8 +69,8 @@ public class ClipboardTest implements IAbstractTest {
         LOGGER.info("Response code of connection is correct: 200.");
         LOGGER.info("Trying to get text from the clipboard...");
         try (InputStream is = con.getInputStream();
-                InputStreamReader ir = new InputStreamReader(is);
-                BufferedReader br = new BufferedReader(ir)) {
+             InputStreamReader ir = new InputStreamReader(is);
+             BufferedReader br = new BufferedReader(ir)) {
             String inputLine;
             StringBuilder sb = new StringBuilder();
             while ((inputLine = br.readLine()) != null) {

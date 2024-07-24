@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class FacebookTest implements IAbstractTest {
 
     @Test
-    public void signUpTest(){
+    public void signUpTest() {
         FacebookHomePage homePage = new FacebookHomePage(getDriver());
         FacebookSignUpForm signUpForm = homePage.clickNewAccountbutton();
         signUpForm.typeName("Ivan");

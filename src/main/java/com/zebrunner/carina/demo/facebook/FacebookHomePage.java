@@ -14,8 +14,7 @@ public class FacebookHomePage extends AbstractPage {
         open();
     }
 
-
-    public FacebookSignUpForm clickNewAccountbutton(){
+    public FacebookSignUpForm clickNewAccountbutton() {
         createNewAccountButton.click();
         return new FacebookSignUpForm(getDriver());
     }

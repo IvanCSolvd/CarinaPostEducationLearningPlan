@@ -15,16 +15,16 @@ public class FacebookSignUpForm extends AbstractPage {
     protected FacebookSignUpForm(WebDriver driver) {
         super(driver);
     }
-    
-    public void typeName(String name){
+
+    public void typeName(String name) {
         nameField.type(name);
     }
 
-    public void clickSignButton(){
+    public void clickSignButton() {
         signUpButton.click();
     }
 
-    public boolean isSignButtonPresent(){
+    public boolean isSignButtonPresent() {
         return signUpButton.isPresent();
     }
 }

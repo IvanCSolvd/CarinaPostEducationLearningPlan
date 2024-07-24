@@ -3,14 +3,7 @@ package com.zebrunner.carina.demo.websocket;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.websocket.ClientEndpoint;
-import javax.websocket.CloseReason;
-import javax.websocket.ContainerProvider;
-import javax.websocket.OnClose;
-import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
-import javax.websocket.Session;
-import javax.websocket.WebSocketContainer;
+import javax.websocket.*;
 import java.lang.invoke.MethodHandles;
 import java.net.URI;
 

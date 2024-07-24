@@ -15,14 +15,13 @@
  *******************************************************************************/
 package com.zebrunner.carina.demo;
 
-import java.lang.invoke.MethodHandles;
-
+import com.zebrunner.carina.core.IAbstractTest;
+import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.Test;
 
-import com.zebrunner.carina.core.IAbstractTest;
-import com.zebrunner.carina.core.registrar.ownership.MethodOwner;
+import java.lang.invoke.MethodHandles;
 
 /**
  * This is Hello World carina-demo tests.
