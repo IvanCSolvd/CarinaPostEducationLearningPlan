@@ -10,12 +10,16 @@ public class LoginPage extends AbstractPage {
 
     @FindBy(xpath = "/input[@id='loginFrm_loginname']")
     public ExtendedWebElement loginNameInput;
+
     @FindBy(css = "[title='Continue']")
     private ExtendedWebElement registrationContinueButton;
+
     @FindBy(css = "#loginFrm_password")
     private ExtendedWebElement passwordInput;
+
     @FindBy(css = "[title='Login']")
     private ExtendedWebElement loginButton;
+
     @FindBy(css = ".maintext")
     private ExtendedWebElement accountText;
 
