@@ -30,8 +30,18 @@ public class AutomationStoreTest implements IAbstractTest {
         Assert.assertTrue(loginPage.accountIsLogged(), "Account is not logged");
     }
 
-    //todo implement testSearchProduct
+    @Test
+    public void testSearchProduct() {
+        HomePage homePage = new HomePage(getDriver());
+        Assert.assertTrue(homePage.isPageOpened(), "Page is not opened correctly in the HomePage.");
+        String logoText = homePage.getLogoText();
+        Assert.assertEquals(logoText, "Automation Test Store", "Logo text is not the same");
+        homePage.searchForProduct("shirt");
+        homePage.printSearchResults();
+        Assert.assertTrue(homePage.isSearchIncluded("shirt"), "The product ");
+    }
 
+    @Test
     public void testEmptyCart() {
         HomePage homePage = new HomePage(getDriver());
         CartPage cartPage = homePage.clickCartButton();
